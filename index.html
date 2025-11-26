@@ -132,13 +132,16 @@
                 <p class="text-xl text-gray-300">Погрузитесь в Мир Элементов</p>
             </div>
 
-            <!-- Video Placeholder -->
-            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 aspect-video max-w-4xl mx-auto flex items-center justify-center">
-                <div class="text-center">
-                    <div class="text-6xl mb-4">▶️</div>
-                    <p class="text-gray-400 text-lg">Трейлер скоро появится</p>
-                    <p class="text-sm text-gray-500 mt-2">Следите за обновлениями!</p>
-                </div>
+            <!-- Video Player -->
+            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
+                <video 
+                    class="w-full aspect-video"
+                    controls
+                    poster="/content/trailer_poster.jpg"
+                >
+                    <source src="/content/secret_mendeleeva_trailer.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
         </div>
     </section>
@@ -189,15 +192,15 @@
                 </div>
 
                 <div class="bg-gradient-to-br from-orange-800/20 to-red-800/20 backdrop-blur-sm rounded-2xl p-6 border border-orange-400/20 hover:border-orange-400/50 transition-all">
-                    <div class="text-5xl mb-4">💫</div>
-                    <h4 class="text-xl font-bold mb-3 text-orange-300">Двухуровневое закрепление</h4>
-                    <p class="text-gray-300 text-sm leading-relaxed">Тест во сне + финальная контрольная для лучшего запоминания</p>
+                    <div class="text-5xl mb-4">🎨</div>
+                    <h4 class="text-xl font-bold mb-3 text-orange-300">Атмосферный визуальный стиль</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">Красочные локации и персонажи, сюрреалистичный дизайн Мира Элементов!</p>
                 </div>
             </div>
 
             <!-- Stats Block -->
             <div class="bg-gradient-to-r from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-purple-400/30 mb-16">
-                <h3 class="text-3xl font-bold mb-8 text-center">Доказанная эффективность обучения</h3>
+                <h3 class="text-3xl font-bold mb-8 text-center">Доказанная эффективность обучения через игры</h3>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div>
                         <div class="text-5xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-3">
@@ -219,6 +222,128 @@
                         </div>
                         <p class="text-gray-300 text-lg font-semibold mb-2">Соответствие ФГОС</p>
                         <p class="text-gray-400 text-sm">официально одобрено</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="py-24 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="text-6xl mb-4">📸</div>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Скриншоты
+                </h2>
+                <p class="text-xl text-gray-300">Посмотрите на игру в действии</p>
+            </div>
+            
+            <!-- Main Screenshot -->
+            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden mb-8">
+                <img src="/content/screenshot_1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
+            </div>
+            
+            <!-- Screenshot Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="/content/screenshot_7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements -->
+    <section id="requirements" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="text-6xl mb-4">💻</div>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Системные требования
+                </h2>
+                <p class="text-xl text-gray-300">Игра доступна на любом устройстве!</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-300">Минимальные</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><span class="text-purple-400">✓</span>Современный веб-браузер</li>
+                        <li class="flex items-start gap-3"><span class="text-purple-400">✓</span>Любая ОС</li>
+                        <li class="flex items-start gap-3"><span class="text-purple-400">✓</span>Интернет</li>
+                        <li class="flex items-start gap-3"><span class="text-purple-400">✓</span>2 ГБ RAM</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-3xl p-8 border border-blue-400/20">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-300">Устройства</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><span class="text-blue-400">🖥️</span>Компьютер</li>
+                        <li class="flex items-start gap-3"><span class="text-blue-400">📱</span>Смартфон</li>
+                        <li class="flex items-start gap-3"><span class="text-blue-400">📲</span>Планшет</li>
+                        <li class="flex items-start gap-3"><span class="text-blue-400">🌐</span>Любой браузер</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-pink-900/30 to-purple-900/30 backdrop-blur-sm rounded-3xl p-8 border border-pink-400/20">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-300">Особенности</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><span class="text-pink-400">⚡</span>Лёгкий размер</li>
+                        <li class="flex items-start gap-3"><span class="text-pink-400">🎮</span>Не требует установки</li>
+                        <li class="flex items-start gap-3"><span class="text-pink-400">💾</span>Автосохранение</li>
+                        <li class="flex items-start gap-3"><span class="text-pink-400">🌍</span>Кроссплатформенность</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-24 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-12">
+                <div class="text-6xl mb-4">⬇️</div>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Попробуйте бесплатно
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Первая глава полностью бесплатна!
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 max-w-4xl mx-auto">
+                <div class="text-6xl font-bold text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-6">
+                    БЕСПЛАТНО
+                </div>
+                <p class="text-lg text-gray-300 mb-8">
+                    Полная версия: <span class="text-2xl font-bold text-purple-400">199-299₽</span>
+                </p>
+                <button class="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    ▶ Играть в демо
+                </button>
+                <div class="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-400 font-bold mb-1">Продолжительность</div>
+                        <div class="text-gray-300">~30 минут</div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-400 font-bold mb-1">Содержание</div>
+                        <div class="text-gray-300">1 глава из 3</div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4">
+                        <div class="text-purple-400 font-bold mb-1">Концовки</div>
+                        <div class="text-gray-300">3 из 11</div>
                     </div>
                 </div>
             </div>
@@ -344,25 +469,33 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">ЕУ</div>
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
+                        <img src="/content/team_esenia.jpg" alt="Есения Ушакова" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Есения Ушакова</h3>
                     <p class="text-purple-300 text-center text-sm">Тимлид, Сценарист</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">АВ</div>
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
+                        <img src="/content/team_anna.jpg" alt="Анна Вишнякова" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Анна Вишнякова</h3>
                     <p class="text-purple-300 text-center text-sm">Программист</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">ЮБ</div>
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
+                        <img src="/content/team_julia.jpg" alt="Юлия Байборина" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Юлия Байборина</h3>
                     <p class="text-purple-300 text-center text-sm">Артдизайнер</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
-                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">ТЗ</div>
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
+                        <img src="/content/team_timofey.jpg" alt="Тимофей Земцов" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Тимофей Земцов</h3>
                     <p class="text-purple-300 text-center text-sm">Наставник/QA</p>
                 </div>
@@ -409,14 +542,16 @@
                 <h3 class="text-2xl font-bold mb-6 text-center">Контакты команды</h3>
                 <div class="space-y-6">
                     <div>
-                        <h4 class="font-bold text-purple-300 mb-2">Есения Ушакова - Тимлид</h4>
-                        <p class="text-sm text-gray-300"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="731600161d1a124343331a101f1c06175d101c1e">[email&#160;protected]</a></p>
-                        <p class="text-sm text-gray-300">+7-982-673-93-84</p>
+                        <h4 class="font-bold text-purple-300 mb-2">Есения Ушакова - Тимлид, Сценарист</h4>
+                        <p class="text-sm text-gray-300">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd8ced8d3d4dc8d8dfdd4ded1d2c8d993ded2d0">[email&#160;protected]</a></p>
+                        <p class="text-sm text-gray-300">📱 +7-982-673-93-84</p>
+                        <p class="text-sm text-gray-300">✈️ Telegram: @syanushi</p>
                     </div>
                     <div>
-                        <h4 class="font-bold text-purple-300 mb-2">Тимофей Земцов - Наставник</h4>
-                        <p class="text-sm text-gray-300"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b011e160f08140d0818131414173b1c161a121755181416">[email&#160;protected]</a></p>
-                        <p class="text-sm text-gray-300">+7-912-721-08-90</p>
+                        <h4 class="font-bold text-purple-300 mb-2">Тимофей Земцов - Наставник/QA</h4>
+                        <p class="text-sm text-gray-300">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="166c737b6265796065757e79797a56717b777f7a3875797b">[email&#160;protected]</a></p>
+                        <p class="text-sm text-gray-300">📱 +7-912-721-08-90</p>
+                        <p class="text-sm text-gray-300">✈️ Telegram: @timzboi</p>
                     </div>
                 </div>
                 <div class="mt-8 text-center pt-6 border-t border-purple-400/20">
@@ -437,4 +572,31 @@
                 </span>
             </div>
             <p class="text-gray-400 text-sm mb-2">© 2025 Команда "Вумен в кубе"</p>
-            <p class="text-gray-500 text-xs">Образовательная визуальная новелла • I
+            <p class="text-gray-500 text-xs">Образовательная визуальная новелла • I            <p class="text-gray-500 text-xs">Образовательная визуальная новелла • IT-куб г. Арамиль</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Tooltip для химических элементов
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".animate-float");
+            const facts = [
+                "В аккумуляторах",
+                "В морской соли", 
+                "В фейерверках",
+                "В GPS системах",
+                "В ваших костях",
+                "В вашей крови"
+            ];
+            
+            elements.forEach((elem, index) => {
+                const tooltip = document.createElement("div");
+                tooltip.className = "absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/90 px-3 py-2 rounded-lg text-xs whitespace-nowrap z-10 opacity-0 transition-opacity duration-200 pointer-events-none";
+                tooltip.textContent = facts[index];
+                elem.style.position = "relative";
+                elem.appendChild(tooltip);
+    
