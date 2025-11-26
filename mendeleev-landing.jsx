@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Beaker, Sparkles, Users, Mail, Heart, Trophy, Gamepad2, BookOpen, ChevronDown, Menu, X, Play, Download, Monitor, HelpCircle, ChevronLeft, ChevronRight, Maximize2, Calendar, Send } from 'lucide-react';
+import { Beaker, Sparkles, Users, Mail, Heart, Trophy, Gamepad2, BookOpen, ChevronDown, Menu, X, Play, Download, Monitor, HelpCircle, ChevronLeft, ChevronRight, Maximize2, Calendar, Send, FileText } from 'lucide-react';
 
 export default function MendeleevLanding() {
   const [activeSection, setActiveSection] = useState('home');
@@ -127,7 +127,8 @@ export default function MendeleevLanding() {
     { id: 'demo', label: 'Демо' },
     { id: 'faq', label: 'FAQ' },
     { id: 'team', label: 'Команда' },
-    { id: 'contact', label: 'Контакты' }
+    { id: 'contact', label: 'Контакты' },
+    { id: 'presentation', label: 'Презентация' }
   ];
 
   return (
@@ -304,14 +305,33 @@ export default function MendeleevLanding() {
 
           {/* Video Player */}
           <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
+            {/* Вариант 1: Локальное видео (если <25МБ) */}
             <video 
               className="w-full aspect-video"
               controls
-              poster="/content/trailer_poster.jpg"
+              poster="./content/trailer_poster.jpg"
             >
-              <source src="/content/secret_mendeleeva_trailer.mp4" type="video/mp4" />
+              <source src="./content/secret_mendeleeva_trailer.mp4" type="video/mp4" />
               Ваш браузер не поддерживает видео.
             </video>
+            
+            {/* Вариант 2: VK Video (раскомментируйте и вставьте свой ID) */}
+            {/* <iframe 
+              className="w-full aspect-video"
+              src="https://vk.com/video_ext.php?oid=ВАШ_OID&id=ВАШ_ID&hd=2"
+              frameBorder="0"
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+              allowFullScreen
+            ></iframe> */}
+            
+            {/* Вариант 3: Rutube (раскомментируйте и вставьте свой ID) */}
+            {/* <iframe 
+              className="w-full aspect-video"
+              src="https://rutube.ru/play/embed/ВАШ_VIDEO_ID"
+              frameBorder="0"
+              allow="clipboard-write; autoplay"
+              allowFullScreen
+            ></iframe> */}
           </div>
 
 
@@ -481,7 +501,7 @@ export default function MendeleevLanding() {
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-400/30 aspect-video">
               <img 
-                src={`/content/screenshot_${currentScreenshot + 1}.jpg`} 
+                src={`./content/screenshot_${currentScreenshot + 1}.jpg`} 
                 alt={screenshots[currentScreenshot].title}
                 className="w-full h-full object-cover cursor-pointer"
                 onClick={() => openLightbox(screenshots[currentScreenshot])}
@@ -529,7 +549,7 @@ export default function MendeleevLanding() {
                 }`}
               >
                 <img 
-                  src={`/content/screenshot_${index + 1}.jpg`} 
+                  src={`./content/screenshot_${index + 1}.jpg`} 
                   alt={screenshot.title} 
                   className="w-full h-full object-cover" 
                 />
@@ -554,7 +574,7 @@ export default function MendeleevLanding() {
           <div className="max-w-6xl w-full">
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl overflow-hidden">
               <img 
-                src={`/content/screenshot_${screenshots.findIndex(s => s.id === lightboxImage?.id) + 1}.jpg`}
+                src={`./content/screenshot_${screenshots.findIndex(s => s.id === lightboxImage?.id) + 1}.jpg`}
                 alt={lightboxImage?.title}
                 className="w-full h-full object-contain"
               />
@@ -837,7 +857,7 @@ export default function MendeleevLanding() {
               >
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
                   <img 
-                    src={`/content/team_${member.name.split(' ')[0].toLowerCase()}.jpg`}
+                    src={`./content/team_${member.name.split(' ')[0].toLowerCase()}.jpg`}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
@@ -997,6 +1017,45 @@ export default function MendeleevLanding() {
                   Акселератор полезных игр
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Presentation Section */}
+      <section id="presentation" className="py-24 px-4 bg-black/20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <FileText className="w-16 h-16 mx-auto mb-4 text-purple-400" />
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Презентация проекта
+            </h2>
+            <p className="text-xl text-gray-300">
+              Подробная информация о нашей игре
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 text-center">
+            <div className="mb-8">
+              <div className="text-6xl mb-6">📄</div>
+              <h3 className="text-2xl font-bold mb-4">Презентация "Секрет Менделеева"</h3>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Полная презентация проекта с подробным описанием концепции, механик, целевой аудитории и планов развития игры.
+              </p>
+            </div>
+
+            <a
+              href="./content/SecretMendeleeva_presentation.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <Download className="w-5 h-5" />
+              Открыть презентацию
+            </a>
+
+            <div className="mt-8 text-sm text-gray-400">
+              <p>PDF формат • Откроется в новом окне</p>
             </div>
           </div>
         </div>

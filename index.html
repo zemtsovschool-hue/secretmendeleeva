@@ -48,6 +48,7 @@
                     <a href="#faq" class="hover:text-purple-400 transition-all">FAQ</a>
                     <a href="#team" class="hover:text-purple-400 transition-all">Команда</a>
                     <a href="#contact" class="hover:text-purple-400 transition-all">Контакты</a>
+                    <a href="#presentation" class="hover:text-purple-400 transition-all">Презентация</a>
                 </div>
             </div>
         </div>
@@ -134,14 +135,37 @@
 
             <!-- Video Player -->
             <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
+                <!-- Вариант 1: Локальное видео (если <25МБ) -->
                 <video 
                     class="w-full aspect-video"
                     controls
-                    poster="/content/trailer_poster.jpg"
+                    poster="./content/trailer_poster.jpg"
                 >
-                    <source src="/content/secret_mendeleeva_trailer.mp4" type="video/mp4">
+                    <source src="./content/secret_mendeleeva_trailer.mp4" type="video/mp4">
                     Ваш браузер не поддерживает видео.
                 </video>
+                
+                <!-- Вариант 2: VK Video (раскомментируйте и вставьте свой ID) -->
+                <!-- 
+                <iframe 
+                    class="w-full aspect-video"
+                    src="https://vk.com/video_ext.php?oid=ВАШ_OID&id=ВАШ_ID&hd=2"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                    allowfullscreen>
+                </iframe>
+                -->
+                
+                <!-- Вариант 3: Rutube (раскомментируйте и вставьте свой ID) -->
+                <!--
+                <iframe 
+                    class="w-full aspect-video"
+                    src="https://rutube.ru/play/embed/ВАШ_VIDEO_ID"
+                    frameborder="0"
+                    allow="clipboard-write; autoplay"
+                    allowfullscreen>
+                </iframe>
+                -->
             </div>
         </div>
     </section>
@@ -241,28 +265,28 @@
             
             <!-- Main Screenshot -->
             <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden mb-8">
-                <img src="/content/screenshot_1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
+                <img src="./content/screenshot_1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
             </div>
             
             <!-- Screenshot Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="/content/screenshot_7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
+                    <img src="./content/screenshot_7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
                 </div>
             </div>
         </div>
@@ -470,7 +494,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
                     <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
-                        <img src="/content/team_esenia.jpg" alt="Есения Ушакова" class="w-full h-full object-cover">
+                        <img src="./content/team_esenia.jpg" alt="Есения Ушакова" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Есения Ушакова</h3>
                     <p class="text-purple-300 text-center text-sm">Тимлид, Сценарист</p>
@@ -478,7 +502,7 @@
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
                     <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
-                        <img src="/content/team_anna.jpg" alt="Анна Вишнякова" class="w-full h-full object-cover">
+                        <img src="./content/team_anna.jpg" alt="Анна Вишнякова" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Анна Вишнякова</h3>
                     <p class="text-purple-300 text-center text-sm">Программист</p>
@@ -486,7 +510,7 @@
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
                     <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
-                        <img src="/content/team_julia.jpg" alt="Юлия Байборина" class="w-full h-full object-cover">
+                        <img src="./content/team_julia.jpg" alt="Юлия Байборина" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Юлия Байборина</h3>
                     <p class="text-purple-300 text-center text-sm">Артдизайнер</p>
@@ -494,7 +518,7 @@
 
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/50 transition-all">
                     <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-400/30">
-                        <img src="/content/team_timofey.jpg" alt="Тимофей Земцов" class="w-full h-full object-cover">
+                        <img src="./content/team_timofey.jpg" alt="Тимофей Земцов" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-center">Тимофей Земцов</h3>
                     <p class="text-purple-300 text-center text-sm">Наставник/QA</p>
@@ -557,6 +581,45 @@
                 <div class="mt-8 text-center pt-6 border-t border-purple-400/20">
                     <p class="text-gray-400">ЦЦОД "IT-куб г. Арамиль", Россия</p>
                     <p class="text-sm text-gray-500 mt-2">Акселератор полезных игр</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section -->
+    <section id="presentation" class="py-24 px-4 bg-black/20">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="text-6xl mb-4">📄</div>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Презентация проекта
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Подробная информация о нашей игре
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30 text-center">
+                <div class="mb-8">
+                    <div class="text-6xl mb-6">📑</div>
+                    <h3 class="text-2xl font-bold mb-4">Презентация "Секрет Менделеева"</h3>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Полная презентация проекта с подробным описанием концепции, механик, целевой аудитории и планов развития игры.
+                    </p>
+                </div>
+
+                <a
+                    href="./content/SecretMendeleeva_presentation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                    <span class="text-xl">⬇</span>
+                    Открыть презентацию
+                </a>
+
+                <div class="mt-8 text-sm text-gray-400">
+                    <p>PDF формат • Откроется в новом окне</p>
                 </div>
             </div>
         </div>
