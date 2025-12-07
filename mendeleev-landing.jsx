@@ -50,14 +50,14 @@ export default function MendeleevLanding() {
   ];
 
   const screenshots = [
-    { id: 1, title: 'Главный экран', desc: 'Главный экран игры' },
-    { id: 2, title: 'Диалог с элементами', desc: 'Общение с персонифицированными элементами' },
-    { id: 3, title: 'Мир Элементов', desc: 'Волшебный мир химических элементов' },
-    { id: 4, title: 'Выбор пути', desc: 'Ваши выборы определяют сюжет' },
-    { id: 5, title: 'Встреча с Менделеевым', desc: 'Финальная встреча с великим учёным' },
-    { id: 6, title: 'Контрольная работа', desc: 'Проверка знаний по химии' },
-    { id: 7, title: 'Финал игры', desc: 'Одна из 11 уникальных концовок' },
-    { id: 8, title: 'Игровой процесс', desc: 'Увлекательный игровой процесс' }
+    { id: 1, title: 'Лекция по химии', desc: 'Главный экран игры', file: '1lecture.jpg' },
+    { id: 2, title: 'Спор с одноклассником', desc: 'Выбор пути в начале истории', file: '2bet.jpg' },
+    { id: 3, title: 'Домашнее задание', desc: 'Альберт готовится к контрольной', file: '3homework.jpg' },
+    { id: 4, title: 'Добро пожаловать в Мир Элементов', desc: 'Начало приключения', file: '4welcome.jpg' },
+    { id: 5, title: 'Двери в Мире Элементов', desc: 'Волшебный мир химических элементов', file: '5doors.jpg' },
+    { id: 6, title: 'Встреча с Литием', desc: 'Общение с персонифицированными элементами', file: '6lithium.jpg' },
+    { id: 7, title: 'Контрольная работа', desc: 'Проверка знаний по химии', file: '7cotrol.jpg' },
+    { id: 8, title: 'Разговор с Олей', desc: 'Романтическая линия игры', file: '8olya.jpg' }
   ];
 
   const faq = [
@@ -242,13 +242,15 @@ export default function MendeleevLanding() {
               <Play className="w-5 h-5" />
               Смотреть трейлер
             </button>
-            <button 
-              onClick={() => scrollToSection('demo')}
+            <a
+              href="https://games.kruzhok.org/novels/projects/4f13e0f9-8384-4aad-8e92-d0e4f50c4c42"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full text-lg font-bold hover:bg-white/20 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Download className="w-5 h-5" />
               Играть бесплатно
-            </button>
+            </a>
           </div>
 
           {/* Floating Elements */}
@@ -496,7 +498,7 @@ export default function MendeleevLanding() {
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-400/30 aspect-video">
               <img
-                src={`./content/${currentScreenshot + 1}.jpg`}
+                src={`./content/${screenshots[currentScreenshot].file}`}
                 alt={screenshots[currentScreenshot].title}
                 className="w-full h-full object-cover cursor-pointer"
                 onClick={() => openLightbox(screenshots[currentScreenshot])}
@@ -544,7 +546,7 @@ export default function MendeleevLanding() {
                 }`}
               >
                 <img
-                  src={`./content/${index + 1}.jpg`}
+                  src={`./content/${screenshot.file}`}
                   alt={screenshot.title}
                   className="w-full h-full object-cover"
                 />
@@ -569,7 +571,7 @@ export default function MendeleevLanding() {
           <div className="max-w-6xl w-full">
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl overflow-hidden">
               <img
-                src={`./content/${screenshots.findIndex(s => s.id === lightboxImage?.id) + 1}.jpg`}
+                src={`./content/${lightboxImage?.file}`}
                 alt={lightboxImage?.title}
                 className="w-full h-full object-contain"
               />
@@ -707,10 +709,15 @@ export default function MendeleevLanding() {
               </p>
             </div>
 
-            <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center gap-3 mx-auto">
+            <a
+              href="https://games.kruzhok.org/novels/projects/4f13e0f9-8384-4aad-8e92-d0e4f50c4c42"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+            >
               <Play className="w-6 h-6" />
               Играть в демо
-            </button>
+            </a>
 
             <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/5 rounded-xl p-4">
