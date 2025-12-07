@@ -133,39 +133,31 @@
                 <p class="text-xl text-gray-300">Погрузитесь в Мир Элементов</p>
             </div>
 
-            <!-- Video Player -->
+            <!-- Trailer Image Link -->
             <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
-                <!-- Вариант 1: Локальное видео (если <25МБ) -->
-                <video 
-                    class="w-full aspect-video"
-                    controls
-                    poster="./content/trailer_poster.jpg"
+                <a
+                    href="https://disk.yandex.ru/i/Y37F-x7NSRmtow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block relative group"
                 >
-                    <source src="./content/secret_mendeleeva_trailer.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
-                </video>
-                
-                <!-- Вариант 2: VK Video (раскомментируйте и вставьте свой ID) -->
-                <!-- 
-                <iframe 
-                    class="w-full aspect-video"
-                    src="https://vk.com/video_ext.php?oid=ВАШ_OID&id=ВАШ_ID&hd=2"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-                    allowfullscreen>
-                </iframe>
-                -->
-                
-                <!-- Вариант 3: Rutube (раскомментируйте и вставьте свой ID) -->
-                <!--
-                <iframe 
-                    class="w-full aspect-video"
-                    src="https://rutube.ru/play/embed/ВАШ_VIDEO_ID"
-                    frameborder="0"
-                    allow="clipboard-write; autoplay"
-                    allowfullscreen>
-                </iframe>
-                -->
+                    <img
+                        src="./content/trailer.jpg"
+                        alt="Трейлер игры - нажмите для просмотра"
+                        class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+                    >
+                    <!-- Play button overlay -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                        <div class="w-20 h-20 bg-purple-600/90 rounded-full flex items-center justify-center group-hover:bg-purple-500 transition-colors">
+                            <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <p class="text-center text-sm text-gray-400 mt-4 mb-2">
+                    ▶ Нажмите на изображение, чтобы посмотреть трейлер
+                </p>
             </div>
         </div>
     </section>
@@ -265,28 +257,31 @@
             
             <!-- Main Screenshot -->
             <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden mb-8">
-                <img src="./content/screenshot_1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
+                <img src="./content/1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
             </div>
-            
+
             <!-- Screenshot Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
+                    <img src="./content/2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
+                    <img src="./content/3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
+                    <img src="./content/4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
+                    <img src="./content/5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
+                    <img src="./content/6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/screenshot_7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
+                    <img src="./content/7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
+                </div>
+                <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
+                    <img src="./content/8.jpg" alt="Игровой процесс" class="w-full aspect-video object-cover">
                 </div>
             </div>
         </div>

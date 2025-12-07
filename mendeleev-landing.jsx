@@ -49,14 +49,15 @@ export default function MendeleevLanding() {
     { icon: Trophy, title: 'Помощь в учёбе', desc: 'Закрепление материала без зубрёжки' }
   ];
 
-  // Placeholder скриншоты (замените на реальные пути к изображениям)
   const screenshots = [
-    { id: 1, title: 'Главное меню', desc: 'Стильное главное меню игры' },
-    { id: 2, title: 'Мир Элементов', desc: 'Волшебный мир химических элементов' },
-    { id: 3, title: 'Диалог с Литием', desc: 'Общение с персонифицированными элементами' },
-    { id: 4, title: 'Встреча с Менделеевым', desc: 'Финальная встреча с великим учёным' },
-    { id: 5, title: 'Школьная сцена', desc: 'Реалистичные школьные локации' },
-    { id: 6, title: 'Концовка', desc: 'Одна из 11 уникальных концовок' }
+    { id: 1, title: 'Главный экран', desc: 'Главный экран игры' },
+    { id: 2, title: 'Диалог с элементами', desc: 'Общение с персонифицированными элементами' },
+    { id: 3, title: 'Мир Элементов', desc: 'Волшебный мир химических элементов' },
+    { id: 4, title: 'Выбор пути', desc: 'Ваши выборы определяют сюжет' },
+    { id: 5, title: 'Встреча с Менделеевым', desc: 'Финальная встреча с великим учёным' },
+    { id: 6, title: 'Контрольная работа', desc: 'Проверка знаний по химии' },
+    { id: 7, title: 'Финал игры', desc: 'Одна из 11 уникальных концовок' },
+    { id: 8, title: 'Игровой процесс', desc: 'Увлекательный игровой процесс' }
   ];
 
   const faq = [
@@ -303,35 +304,29 @@ export default function MendeleevLanding() {
             </p>
           </div>
 
-          {/* Video Player */}
+          {/* Trailer Image Link */}
           <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
-            {/* Вариант 1: Локальное видео (если <25МБ) */}
-            <video 
-              className="w-full aspect-video"
-              controls
-              poster="./content/trailer_poster.jpg"
+            <a
+              href="https://disk.yandex.ru/i/Y37F-x7NSRmtow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative group"
             >
-              <source src="./content/secret_mendeleeva_trailer.mp4" type="video/mp4" />
-              Ваш браузер не поддерживает видео.
-            </video>
-            
-            {/* Вариант 2: VK Video (раскомментируйте и вставьте свой ID) */}
-            {/* <iframe 
-              className="w-full aspect-video"
-              src="https://vk.com/video_ext.php?oid=ВАШ_OID&id=ВАШ_ID&hd=2"
-              frameBorder="0"
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
-              allowFullScreen
-            ></iframe> */}
-            
-            {/* Вариант 3: Rutube (раскомментируйте и вставьте свой ID) */}
-            {/* <iframe 
-              className="w-full aspect-video"
-              src="https://rutube.ru/play/embed/ВАШ_VIDEO_ID"
-              frameBorder="0"
-              allow="clipboard-write; autoplay"
-              allowFullScreen
-            ></iframe> */}
+              <img
+                src="./content/trailer.jpg"
+                alt="Трейлер игры - нажмите для просмотра"
+                className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                <div className="w-20 h-20 bg-purple-600/90 rounded-full flex items-center justify-center group-hover:bg-purple-500 transition-colors">
+                  <Play className="w-10 h-10 text-white ml-1" />
+                </div>
+              </div>
+            </a>
+            <p className="text-center text-sm text-gray-400 mt-4 mb-2">
+              ▶ Нажмите на изображение, чтобы посмотреть трейлер
+            </p>
           </div>
 
 
@@ -500,8 +495,8 @@ export default function MendeleevLanding() {
           {/* Carousel */}
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-400/30 aspect-video">
-              <img 
-                src={`./content/screenshot_${currentScreenshot + 1}.jpg`} 
+              <img
+                src={`./content/${currentScreenshot + 1}.jpg`}
                 alt={screenshots[currentScreenshot].title}
                 className="w-full h-full object-cover cursor-pointer"
                 onClick={() => openLightbox(screenshots[currentScreenshot])}
@@ -537,7 +532,7 @@ export default function MendeleevLanding() {
           </div>
 
           {/* Thumbnail Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mt-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4 mt-8">
             {screenshots.map((screenshot, index) => (
               <button
                 key={screenshot.id}
@@ -548,10 +543,10 @@ export default function MendeleevLanding() {
                     : 'border-gray-600 hover:border-purple-400/50'
                 }`}
               >
-                <img 
-                  src={`./content/screenshot_${index + 1}.jpg`} 
-                  alt={screenshot.title} 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={`./content/${index + 1}.jpg`}
+                  alt={screenshot.title}
+                  className="w-full h-full object-cover"
                 />
               </button>
             ))}
@@ -573,8 +568,8 @@ export default function MendeleevLanding() {
           </button>
           <div className="max-w-6xl w-full">
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl overflow-hidden">
-              <img 
-                src={`./content/screenshot_${screenshots.findIndex(s => s.id === lightboxImage?.id) + 1}.jpg`}
+              <img
+                src={`./content/${screenshots.findIndex(s => s.id === lightboxImage?.id) + 1}.jpg`}
                 alt={lightboxImage?.title}
                 className="w-full h-full object-contain"
               />
