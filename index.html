@@ -33,6 +33,26 @@
             background: linear-gradient(to right, rgb(192, 132, 252), rgb(244, 114, 182));
             border-radius: 2px;
         }
+        /* Стили для FAQ */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.active {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        .faq-question {
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        .faq-arrow.active {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-indigo-950 via-purple-950 to-violet-950 text-white">
@@ -273,31 +293,31 @@
             
             <!-- Main Screenshot -->
             <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden mb-8">
-                <img src="./content/1.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
+                <img src="./content/1lecture.jpg" alt="Главный экран игры" class="w-full aspect-video object-cover">
             </div>
 
             <!-- Screenshot Grid -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/2.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
+                    <img src="./content/2bet.jpg" alt="Диалог с элементами" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/3.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
+                    <img src="./content/3homework.jpg" alt="Мир элементов" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/4.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
+                    <img src="./content/4welcome.jpg" alt="Выбор пути" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/5.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
+                    <img src="./content/5doors.jpg" alt="Встреча с Менделеевым" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/6.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
+                    <img src="./content/6lithium.jpg" alt="Контрольная работа" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/7.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
+                    <img src="./content/7cotrol.jpg" alt="Финал игры" class="w-full aspect-video object-cover">
                 </div>
                 <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-xl border border-purple-400/20 overflow-hidden hover:border-purple-400/50 transition-all">
-                    <img src="./content/8.jpg" alt="Игровой процесс" class="w-full aspect-video object-cover">
+                    <img src="./content/8olya.jpg" alt="Игровой процесс" class="w-full aspect-video object-cover">
                 </div>
             </div>
         </div>
@@ -364,9 +384,9 @@
                 <p class="text-lg text-gray-300 mb-8">
                     Полная версия: <span class="text-2xl font-bold text-purple-400">199-299₽</span>
                 </p>
-                <button class="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <a href="https://games.kruzhok.org/mendeleeva" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     ▶ Играть в демо
-                </button>
+                </a>
                 <div class="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
                     <div class="bg-white/5 rounded-xl p-4">
                         <div class="text-purple-400 font-bold mb-1">Продолжительность</div>
@@ -378,7 +398,7 @@
                     </div>
                     <div class="bg-white/5 rounded-xl p-4">
                         <div class="text-purple-400 font-bold mb-1">Концовки</div>
-                        <div class="text-gray-300">3 из 11</div>
+                        <div class="text-gray-300">11</div>
                     </div>
                 </div>
             </div>
@@ -395,47 +415,77 @@
                 </h2>
             </div>
 
-            <div class="space-y-6">
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Почему вы разработали данную игру?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Наша команда создала "Секрет Менделеева" в рамках <strong>"Акселератора полезных игр"</strong>. Мы хотели объединить наши увлечения: химию, видеоигры и визуальные новеллы — и создать что-то действительно полезное для школьников.
-                    </p>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Почему вы разработали данную игру?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Наша команда создала "Секрет Менделеева" в рамках <strong>"Акселератора полезных игр"</strong>. Мы хотели объединить наши увлечения: химию, видеоигры и визуальные новеллы — и создать что-то действительно полезное для школьников.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Почему Химия?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Химия окружает нас повсюду: от аккумуляторов в телефонах до кислорода, которым мы дышим. Мы хотим показать, что химия — это не просто формулы в учебнике, а увлекательная история о том, из чего состоит мир!
-                    </p>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Почему Химия?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Химия окружает нас повсюду: от аккумуляторов в телефонах до кислорода, которым мы дышим. Мы хотим показать, что химия — это не просто формулы в учебнике, а увлекательная история о том, из чего состоит мир!
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Почему Визуальная Новелла?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Визуальные новеллы идеально подходят для образовательного контента: они позволяют рассказать историю, вовлечь через выборы и эмоции. Ветвящийся сюжет с 11 концовками мотивирует проходить игру несколько раз, закрепляя материал!
-                    </p>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Почему Визуальная Новелла?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Визуальные новеллы идеально подходят для образовательного контента: они позволяют рассказать историю, вовлечь через выборы и эмоции. Ветвящийся сюжет с 11 концовками мотивирует проходить игру несколько раз, закрепляя материал!
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Для какого возраста подходит?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Игра разработана для подростков 12-17 лет (7-11 классы), изучающих или только начинающих изучать химию. Контент полностью безопасен, без насилия или неподходящих тем.
-                    </p>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Для какого возраста подходит?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Игра разработана для подростков 12-17 лет (7-11 классы), изучающих или только начинающих изучать химию. Контент полностью безопасен, без насилия или неподходящих тем.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Действительно ли это полезно для учёбы?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Да! Исследования показывают, что обучение через игры повышает мотивацию на <strong class="text-purple-400">18%</strong> и улучшает запоминание материала до <strong class="text-purple-400">90%</strong> <span class="text-gray-400">(по сравнению с чтением учебника или просмотром видео, где показатель 10-20%)</span>. Игра соответствует ФГОС!
-                    </p>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Действительно ли это полезно для учёбы?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Да! Исследования показывают, что обучение через игры повышает мотивацию на <strong class="text-purple-400">18%</strong> и улучшает запоминание материала до <strong class="text-purple-400">90%</strong> <span class="text-gray-400">(по сравнению с чтением учебника или просмотром видео, где показатель 10-20%)</span>. Игра соответствует ФГОС!
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-400/20">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-purple-300">Почему игра платная?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Мы используем модель Freemium: первая глава полностью бесплатна. Полная версия стоит 199-299 рублей и включает весь контент с бесплатными обновлениями!
-                    </p>
+                <div class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl border border-purple-400/20 overflow-hidden">
+                    <div class="faq-question p-6 sm:p-8 flex justify-between items-center hover:bg-purple-900/10 transition-colors">
+                        <h3 class="text-xl sm:text-2xl font-bold text-purple-300 pr-4">Почему игра платная?</h3>
+                        <span class="faq-arrow text-2xl text-purple-400">▼</span>
+                    </div>
+                    <div class="faq-answer px-6 sm:px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Мы используем модель Freemium: первая глава полностью бесплатна. Полная версия стоит 199-299 рублей и включает весь контент с бесплатными обновлениями!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -552,10 +602,10 @@
                         Проект "Секрет Менделеева" — это наш ответ на вопрос: как сделать науку интересной для современных подростков?
                     </p>
                     <div class="text-center pt-6">
-                        <div class="inline-flex items-center gap-3 px-6 py-3 bg-purple-600/20 rounded-full border border-purple-400/30">
+                        <a href="https://vk.com/itcub_aramil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3 bg-purple-600/20 rounded-full border border-purple-400/30 hover:bg-purple-600/30 hover:border-purple-400/50 transition-all">
                             <span class="text-2xl">🎓</span>
                             <span class="text-gray-300">ЦЦОД "IT-куб г. Арамиль"</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -578,15 +628,13 @@
                 <div class="space-y-6">
                     <div>
                         <h4 class="font-bold text-purple-300 mb-2">Есения Ушакова - Тимлид, Сценарист</h4>
-                        <p class="text-sm text-gray-300">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd8ced8d3d4dc8d8dfdd4ded1d2c8d993ded2d0">[email&#160;protected]</a></p>
                         <p class="text-sm text-gray-300">📱 +7-982-673-93-84</p>
-                        <p class="text-sm text-gray-300">✈️ Telegram: @syanushi</p>
+                        <p class="text-sm text-gray-300">✈️ Telegram: <a href="https://t.me/syanushi" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">@syanushi</a></p>
                     </div>
                     <div>
                         <h4 class="font-bold text-purple-300 mb-2">Тимофей Земцов - Наставник/QA</h4>
-                        <p class="text-sm text-gray-300">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="166c737b6265796065757e79797a56717b777f7a3875797b">[email&#160;protected]</a></p>
                         <p class="text-sm text-gray-300">📱 +7-912-721-08-90</p>
-                        <p class="text-sm text-gray-300">✈️ Telegram: @timzboi</p>
+                        <p class="text-sm text-gray-300">✈️ Telegram: <a href="https://t.me/timzboi" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">@timzboi</a></p>
                     </div>
                 </div>
                 <div class="mt-8 text-center pt-6 border-t border-purple-400/20">
@@ -708,6 +756,18 @@
 
             window.addEventListener("scroll", highlightActiveSection);
             highlightActiveSection(); // Вызвать при загрузке страницы
+
+            // FAQ аккордеон
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const arrow = question.querySelector('.faq-arrow');
+
+                    answer.classList.toggle('active');
+                    arrow.classList.toggle('active');
+                });
+            });
         });
     </script>
 </body>
