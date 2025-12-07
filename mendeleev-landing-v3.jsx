@@ -302,22 +302,29 @@ export default function MendeleevLanding() {
             </p>
           </div>
 
-          {/* Video Placeholder */}
-          <div className="relative bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-purple-400/30 aspect-video max-w-4xl mx-auto">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <Play className="w-20 h-20 mx-auto mb-4 text-purple-400 opacity-50" />
-                <p className="text-gray-400">Трейлер скоро появится</p>
-                <p className="text-sm text-gray-500 mt-2">Следите за обновлениями!</p>
+          {/* Trailer Image Link */}
+          <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
+            <a
+              href="https://vk.com/video"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative group"
+            >
+              <img
+                src="./content/trailer_poster.jpg"
+                alt="Трейлер игры - нажмите для просмотра"
+                className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                <div className="w-20 h-20 bg-purple-600/90 rounded-full flex items-center justify-center group-hover:bg-purple-500 transition-colors">
+                  <Play className="w-10 h-10 text-white ml-1" />
+                </div>
               </div>
-            </div>
-            {/* Замените этот блок на реальный YouTube embed или video tag */}
-            {/* <iframe 
-              className="w-full h-full"
-              src="YOUR_YOUTUBE_LINK"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe> */}
+            </a>
+            <p className="text-center text-sm text-gray-400 mt-4 mb-2">
+              ▶ Нажмите на изображение, чтобы посмотреть трейлер
+            </p>
           </div>
 
 
