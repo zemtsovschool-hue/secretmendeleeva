@@ -305,13 +305,13 @@ export default function MendeleevLanding() {
           {/* Trailer Image Link */}
           <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl border border-purple-400/30 overflow-hidden max-w-4xl mx-auto">
             <a
-              href="https://vk.com/video"
+              href="https://disk.yandex.ru/i/Y37F-x7NSRmtow"
               target="_blank"
               rel="noopener noreferrer"
               className="block relative group"
             >
               <img
-                src="./content/trailer_poster.jpg"
+                src="./src/trailer.jpg"
                 alt="Трейлер игры - нажмите для просмотра"
                 className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
               />
