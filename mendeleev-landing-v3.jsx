@@ -311,7 +311,7 @@ export default function MendeleevLanding() {
               className="block relative group"
             >
               <img
-                src="./src/trailer.jpg"
+                src="./content/trailer.jpg"
                 alt="Трейлер игры - нажмите для просмотра"
                 className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
               />
