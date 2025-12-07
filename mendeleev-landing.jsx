@@ -242,13 +242,15 @@ export default function MendeleevLanding() {
               <Play className="w-5 h-5" />
               Смотреть трейлер
             </button>
-            <button 
-              onClick={() => scrollToSection('demo')}
+            <a
+              href="https://games.kruzhok.org/novels/projects/4f13e0f9-8384-4aad-8e92-d0e4f50c4c42"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full text-lg font-bold hover:bg-white/20 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Download className="w-5 h-5" />
               Играть бесплатно
-            </button>
+            </a>
           </div>
 
           {/* Floating Elements */}
@@ -707,10 +709,15 @@ export default function MendeleevLanding() {
               </p>
             </div>
 
-            <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center gap-3 mx-auto">
+            <a
+              href="https://games.kruzhok.org/novels/projects/4f13e0f9-8384-4aad-8e92-d0e4f50c4c42"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+            >
               <Play className="w-6 h-6" />
               Играть в демо
-            </button>
+            </a>
 
             <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
               <div className="bg-white/5 rounded-xl p-4">
