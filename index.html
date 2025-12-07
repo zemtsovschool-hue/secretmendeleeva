@@ -17,6 +17,22 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Стили для активного пункта меню */
+        nav a.active {
+            color: rgb(192, 132, 252);
+            font-weight: 600;
+            position: relative;
+        }
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, rgb(192, 132, 252), rgb(244, 114, 182));
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-indigo-950 via-purple-950 to-violet-950 text-white">
@@ -32,7 +48,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center space-x-3 cursor-pointer" onclick="scrollToSection('home')">
-                    <span class="text-2xl">⚗️</span>
+                    <img src="./content/icon.PNG" alt="Секрет Менделеева" class="w-8 h-8 object-contain">
                     <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Секрет Менделеева
                     </span>
@@ -624,7 +640,7 @@
     <footer class="py-8 px-4 bg-black/40 border-t border-purple-500/20">
         <div class="max-w-7xl mx-auto text-center">
             <div class="flex items-center justify-center space-x-3 mb-4">
-                <span class="text-2xl">⚗️</span>
+                <img src="./content/icon.PNG" alt="Секрет Менделеева" class="w-8 h-8 object-contain">
                 <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Секрет Менделеева
                 </span>
@@ -657,4 +673,43 @@
                 tooltip.textContent = facts[index];
                 elem.style.position = "relative";
                 elem.appendChild(tooltip);
+
+                elem.addEventListener("mouseenter", () => {
+                    tooltip.style.opacity = "1";
+                });
+
+                elem.addEventListener("mouseleave", () => {
+                    tooltip.style.opacity = "0";
+                });
+            });
+
+            // Подсветка активного раздела в меню при скролле
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+            function highlightActiveSection() {
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(section => {
+                    const sectionHeight = section.offsetHeight;
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${sectionId}`) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", highlightActiveSection);
+            highlightActiveSection(); // Вызвать при загрузке страницы
+        });
+    </script>
+</body>
+</html>
     
